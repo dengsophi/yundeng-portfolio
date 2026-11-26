@@ -1,0 +1,140 @@
+.detail-page {
+  --muted: #b9b9b9;
+  --night: var(--blank);
+  --accent: var(--ink);
+  font-family: var(--editorial);
+}
+
+:root[data-theme="light"] .detail-page { --muted: #62594f; }
+
+.detail-page .masthead,
+.detail-page .masthead b { animation: none; }
+
+.detail-page .project-intro {
+  padding-block: clamp(7.5rem, 18vh, 11rem) clamp(1.75rem, 5vh, 3.5rem);
+  text-align: center;
+}
+
+.detail-page .project-intro h1 {
+  max-width: 44rem;
+  margin-inline: auto;
+  font: 400 clamp(1.5rem, 4.05vw, 2rem)/1.12 var(--editorial);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.detail-page .project-hero {
+  width: 100%;
+  margin: 0;
+}
+
+.detail-page .project-hero :is(.hero-view, .image-plate) {
+  height: min(76svh, 60vw);
+  aspect-ratio: auto;
+  background: #0d0d0d;
+}
+
+.detail-page .project-hero img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.detail-page .project-hero figcaption {
+  width: min(90%, 80rem);
+  margin-inline: auto;
+  text-align: right;
+}
+
+.detail-page .project-lead {
+  padding-block: clamp(3rem, 9vw, 8rem) clamp(2.5rem, 8vw, 7rem);
+  text-align: center;
+}
+
+.detail-page .project-hook {
+  max-width: 34ch;
+  margin: 0 auto;
+  color: var(--ink);
+  font: 400 clamp(1.45rem, 3.25vw, 2rem)/1.28 var(--editorial);
+  letter-spacing: .02em;
+  text-wrap: balance;
+}
+
+.detail-page .project-byline { margin-top: 1rem; }
+
+.detail-page .project-section {
+  margin-block: 0 clamp(3.5rem, 10vw, 9rem);
+}
+
+.detail-page .narrative,
+.detail-page .crossing-copy {
+  display: block;
+  max-width: 37rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.detail-page .section-title,
+.detail-page :is(.project-byline, .section-heading, .stage-notes summary, .return-link) {
+  max-width: none;
+  color: var(--ink);
+  font: 400 .6875rem/1.3 var(--editorial);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.detail-page .section-title { margin: 0 0 1.1rem; }
+
+.detail-page :is(.prose, .craft-intro) {
+  color: var(--body);
+  font: 400 clamp(1.0625rem, 1.4vw, 1.1875rem)/1.55 var(--editorial);
+}
+
+.detail-page .narrative .prose p,
+.detail-page .crossing-copy .prose p { margin-inline: auto; }
+
+.detail-page .scene-pair {
+  width: min(100%, 68rem);
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: clamp(1.1rem, 4vw, 4rem);
+  margin: clamp(2.5rem, 8vw, 7rem) auto 0;
+}
+
+.detail-page .scene-pair figure + figure { margin-top: clamp(1.5rem, 9vw, 8rem); }
+.detail-page .scene-image,
+.detail-page .crossing-image { height: auto; aspect-ratio: auto; background: transparent; }
+.detail-page :is(.scene-image, .crossing-image) img { height: auto; }
+
+.detail-page .crossing { display: block; }
+.detail-page .crossing > figure {
+  width: min(100%, 64rem);
+  margin: clamp(2.5rem, 8vw, 7rem) auto 0;
+}
+
+.detail-page .project-craft,
+.detail-page .credits,
+.detail-page .project-return {
+  max-width: 65rem;
+}
+
+.detail-page .project-craft .craft-intro { margin-bottom: 1.55rem; }
+.detail-page .stage-notes-copy { max-width: 65ch; padding-block: .65rem 1.7rem; }
+.detail-page .project figcaption {
+  color: var(--muted);
+  font: 400 .875rem/1.4 var(--editorial);
+}
+
+.detail-page .return-link { text-underline-offset: .28em; }
+.detail-page .lightbox button { font-family: var(--editorial); border-color: var(--rule); }
+.detail-page .lightbox button:hover { background: var(--rule); }
+
+@media (max-width: 620px) {
+  .detail-page .project-hero :is(.hero-view, .image-plate) { height: auto; }
+  .detail-page .project-hero img { height: auto; }
+  .detail-page .scene-pair { grid-template-columns: 1fr; }
+  .detail-page .scene-pair figure + figure { margin-top: 0; }
+}

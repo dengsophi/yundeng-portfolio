@@ -1,0 +1,50 @@
+.project-intro .project-subtitle {
+  margin-top: .55rem;
+  color: var(--ink);
+  font-size: clamp(1.0625rem, 2.2vw, 1.5rem);
+}
+
+.project-intro .project-type {
+  margin-top: .7rem;
+  color: var(--muted);
+  font-size: .9375rem;
+}
+
+.project-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  max-width: 63rem;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.project-hook + .project-overview-grid { margin-top: clamp(2rem, 5vw, 4rem); }
+
+.project-facts {
+  display: grid;
+  gap: 1.15rem;
+  margin: 0;
+  padding-inline-start: clamp(1rem, 3vw, 2rem);
+  border-inline-start: 1px solid var(--rule);
+}
+
+.project-facts dt {
+  margin-bottom: .25rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.project-facts dd { color: var(--body); }
+
+@media (max-width: 680px) {
+  .project-overview-grid { grid-template-columns: 1fr; }
+
+  .project-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem 0 0;
+    border-inline-start: 0;
+    border-block-start: 1px solid var(--rule);
+  }
+}
